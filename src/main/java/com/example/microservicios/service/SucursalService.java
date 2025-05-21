@@ -13,6 +13,7 @@ public class SucursalService {
     @Autowired
     private SucursalRepository sucursalRepository;
 
+
     public List<Sucursal> sucursales(){
         return sucursalRepository.findAll();
     }
@@ -26,3 +27,5 @@ public class SucursalService {
     }
 
 }    
+
+
