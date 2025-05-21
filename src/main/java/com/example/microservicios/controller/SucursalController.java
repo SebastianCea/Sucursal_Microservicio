@@ -20,7 +20,7 @@ public class SucursalController {
 
     @GetMapping
     public ResponseEntity<List<Sucursal>> getSucursales(){
-        List<Sucursal> sucursales=sucursalService.findAll();
+        List<Sucursal> sucursales=sucursalService.sucursales();
         if(sucursales.isEmpty()){
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
