@@ -1,6 +1,7 @@
 package com.example.microservicios.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,8 +23,8 @@ public class SucursalService {
         return sucursalRepository.save(sucursal);
     }
 
-    public Sucursal buscarxIdSucursal(int id){
-        return sucursalRepository.getReferenceById(id);
+    public Optional<Sucursal> findById(Integer id) {
+        return sucursalRepository.findById(id);
     }
 
 }    
