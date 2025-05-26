@@ -2,7 +2,7 @@ package com.example.microservicios.controller;
 
 
 import java.util.List;
-import java.util.Optional;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -33,10 +33,6 @@ public class SucursalController {
         return new ResponseEntity<>(sucursales,HttpStatus.OK);
     }
 
-    @PostMapping
-    public Sucursal postSucursales(@RequestBody Sucursal sucursal){
-        return sucursalService.guardarSucursal(sucursal);
-    }
 
     @PostMapping
     public ResponseEntity<Sucursal> postSucursal(@RequestBody Sucursal sucursal) {
@@ -60,11 +56,7 @@ public class SucursalController {
         return new ResponseEntity<>(buscado,HttpStatus.OK);
     }
 
-    
-    @GetMapping("/{id}")
-    public Optional<Sucursal> getSucursales(@PathVariable int id_sucursal){
-        return sucursalService.findById(id_sucursal);
-    }
+
 
 
     @DeleteMapping
