@@ -27,4 +27,12 @@ public class SucursalService {
         return sucursalRepository.findById(id);
     }
 
+    public String eliminarSucursal(int id){
+        if(sucursalRepository.existsById(id)){
+            sucursalRepository.deleteById(id);
+            return "Sucursal eliminada";
+        }
+        return "No se encontró la sucursal";
+    }
+
 }    

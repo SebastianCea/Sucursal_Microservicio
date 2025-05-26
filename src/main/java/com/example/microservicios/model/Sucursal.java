@@ -26,11 +26,17 @@ public class Sucursal {
     @Column(length = 20, nullable = false)
     private String nombre_sucursal;
 
-     @Column(length = 20, nullable = false)
+     @Column(length = 100, nullable = false)
     private String direccion_sucursal;
 
-     @Column(length = 20, nullable = false)
+     @Column(length = 100, nullable = false)
     private String region_sucursal;
+
+    @Column(length = 100, nullable = false)
+    private String ciudad_sucursal;
+
+    @Column (length = 15, nullable = false)
+    private String telefono_sucursal;
 
      @Column(nullable = false)
     private LocalTime hora_apertura;
