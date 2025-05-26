@@ -23,7 +23,7 @@ public class SucursalService {
         return sucursalRepository.save(sucursal);
     }
 
-    public Optional<Sucursal> findById(Integer id) {
+    public Optional<Sucursal> findById(int id) {
         return sucursalRepository.findById(id);
     }
 
